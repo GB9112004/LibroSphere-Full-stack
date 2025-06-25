@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Store</h1>
+        
+        <!-- Add Book Form -->
+        <div class="form-container">
+            <h2>Add New Book</h2>
+            <form id="addBookForm">
+                <input type="text" id="title" placeholder="Title" required>
+                <input type="text" id="author" placeholder="Author" required>
+                <input type="number" id="publishYear" placeholder="Publish Year" required>
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
+
+        <!-- Search Book by ID -->
+        <div class="form-container">
+            <h2>Search Book by ID</h2>
+            <form id="searchBookForm">
+                <input type="text" id="searchId" placeholder="Enter Book ID" required>
+                <button type="submit">Search Book</button>
+                <button type="button" onclick="clearSearch()" class="clear-btn">Clear</button>
+            </form>
+            <div id="searchResult"></div>
+        </div>
+
+        <!-- Update Book Form -->
+        <div class="form-container">
+            <h2>Update Book</h2>
+            <form id="updateBookForm">
+                <input type="text" id="updateId" placeholder="Book ID" required>
+                <input type="text" id="updateTitle" placeholder="Title">
+                <input type="text" id="updateAuthor" placeholder="Author">
+                <input type="number" id="updateYear" placeholder="Publish Year">
+                <button type="submit">Update Book</button>
+            </form>
+        </div>
+
+        <!-- Book List -->
+        <div class="book-list">
+            <h2>Book List</h2>
+            <button id="loadBooks">Load Books</button>
+            <div id="booksContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
